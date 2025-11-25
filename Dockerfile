@@ -4,7 +4,7 @@ ENV CGO_ENABLED=0
 RUN apk --no-cache update && apk --no-cache upgrade
 
 WORKDIR /var/build
-RUN useradd -u 586 builder && chown -R builder /var/build
+RUN adduser -u 586 builder && chown -R builder /var/build
 
 COPY --chown=builder . /var/build
 
