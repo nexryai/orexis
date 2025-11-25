@@ -1,0 +1,26 @@
+{
+    "name": "Orexis",
+    "build": {
+        "dockerfile": "./Dockerfile"
+    },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "workspaceFolder": "/workspace",
+    "remoteUser": "dev",
+    "overrideCommand": true,
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go"
+            ],
+            "settings": {
+                "editor.linkedEditing": true,
+                "editor.formatOnPaste": true,
+                "editor.formatOnSave": true,
+
+                "[go]": {
+                    "editor.defaultFormatter": "golang.go"
+                }
+            }
+        }
+    }
+}
